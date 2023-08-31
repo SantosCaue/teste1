@@ -1,0 +1,25 @@
+Var
+   f: inteiro
+   l, m: Alfanumérico
+   Agenda: Agenda
+Inicio
+f <- 0
+Enquanto f !=0 faça
+	leia(f)
+	Se f = 2 faça
+		Agenda.adicionaContato(Leia(), Leia())
+		Escreva("Contato adicionado")
+	Senão Se f = 3 faça
+	Leia(Agenda.busca())
+		Se Agenda.busca() = "Erro"
+			Escreva("Contato não encontrado")
+		Senão
+			l <- Agenda.busca().email
+			m <- Agenda.busca().nome
+			Escreva("O nome é:" +  m + "O email é: " + l)
+		Fim Se
+	Senão se f = 4 faça
+		Agenda.removerContato()
+	Fim Se
+Fim Enquanto
+Fim

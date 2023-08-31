@@ -1,0 +1,19 @@
+Var
+    contatoNome, dividido[1,2], contato[1...]: Alfanumérico, 
+    n: Inteiro
+Inicio
+leia(contatoNome)
+leia(contato[1...])
+n <- 0
+Repita
+	dividido <- contato[n].dividido()
+	n <- n + 1
+até (dividido[0] != contatoNome) = Falso E n < contato.tamanho()
+Se (dividido[0] != contatoNome) = Falso faça
+	Escreva("Contato não encontrado")
+Senão
+	n <- n - 1
+	contato[n].remover
+	Escreva("Contato removido")
+Fim se
+Fim
